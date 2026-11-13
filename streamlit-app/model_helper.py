@@ -15,7 +15,7 @@ class CarClassifierResNet(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
 
-        self.model = models.resnet50(weights='DEFAULT')
+        self.model = models.resnet50(weights=None)
 
         # Freeze all pretrained layers
         for param in self.model.parameters():
